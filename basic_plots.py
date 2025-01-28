@@ -97,7 +97,7 @@ fig = plt.figure(figsize=(12,7))
 ax = plt.axes(projection=ccrs.Orthographic(central_longitude=-30, central_latitude=50))
 
 # Choose a different colorbar and make it have 21 distinct colours instead continuous colors
-cmap = plt.get_cmap('seismic',21)
+cmap = plt.get_cmap('coolwarm',21)
 
 plt.pcolormesh(lon_corner,lat_corner,t_data['votemper'][6,0,:,:]-t_data['votemper'][0,0,:,:],transform=ccrs.PlateCarree(),vmin=-1.05*10,vmax=1.05*10,shading='flat',cmap=cmap)
 ax.add_feature(cfeature.NaturalEarthFeature('physical', 'land', '50m', edgecolor='face', facecolor='0.75'))
